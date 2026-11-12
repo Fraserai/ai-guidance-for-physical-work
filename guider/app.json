@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "No name yet™ (Name to be decided)",
+    "slug": "no-name-yet",
+    "version": "1.0.0",
+    "scheme": "nonameyet",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#0D1117"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nonameyet.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Camera access is required for live work guidance.",
+        "NSMicrophoneUsageDescription": "Microphone access is required for hands-free voice guidance.",
+        "NSSpeechRecognitionUsageDescription": "Speech recognition is used for voice transcripts during guidance sessions."
+      }
+    },
+    "android": {
+      "package": "com.nonameyet.app",
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "VIBRATE"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow camera access for live guidance.",
+          "microphonePermission": "Allow microphone access for voice guidance.",
+          "recordAudioAndroid": true
+        }
+      ],
+      "expo-secure-store",
+      "expo-asset"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
